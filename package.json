@@ -1,0 +1,23 @@
+{
+  "name": "meme-api",
+  "version": "1.0.0",
+  "description": "An API for memes",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonasVianaS/meme-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JonasVianaS/meme-api/issues"
+  },
+  "homepage": "https://github.com/JonasVianaS/meme-api#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
