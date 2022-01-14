@@ -4,31 +4,20 @@
   "description": "An API for memes",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JonasVianaS/meme-api.git"
   },
-  "keywords": [
-    "API",
-    "express"
-  ],
-  "author": "JonasVianaS",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/JonasVianaS/meme-api/issues"
   },
   "homepage": "https://github.com/JonasVianaS/meme-api#readme",
   "dependencies": {
-    "dotenv": "^11.0.0",
-    "express": "^4.17.2",
-    "express-fileupload": "^1.2.1",
-    "pg": "^8.7.1",
-    "pg-hstore": "^2.3.4",
-    "sequelize": "^6.13.0"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.15"
+    "express": "^4.17.2"
   }
 }
