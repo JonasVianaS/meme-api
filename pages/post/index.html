@@ -5,12 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        import format from "../../modules/formats.js";
+    </script>
     <style>
         
     </style>
 </head>
 <body>
-    <h1>hi</h1>
-    <p>Welcome to the Jungle</p>
+    <form action="/add" method="post" enctype="multipart/form-data">
+        <input type="text" name="inpt">
+        <input type="file" name="file">
+        <input type="submit" value="Ok">
+    </form>
 </body>
 </html>
