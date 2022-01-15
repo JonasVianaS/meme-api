@@ -22,14 +22,14 @@ app.post('/add',(req,res)=>{
     const file = req.files.file
     const x = fileName.split('.')
     // image add
-    if(formats.image.filter((i)=>{return i === x[x.length-1]}).toString()){
+    if(formats.image.filter((i)=>((i === x[x.length-1]).toString())())){
         console.log('image')
         file.mv('./assets/images/'+fileName,function(err){
             err?res.send(err):res.send("image uploaded")
         })
     }
     // video add
-    if(formats.video.filter((i)=>{return i === x[x.length-1]}).toString()){
+    if(formats.video.filter((i)=>((i === x[x.length-1]).toString())())){
         console.log('video')
         file.mv('./assets/videos/'+fileName,function(err){
             err?res.send(err):res.send("video uploaded")
