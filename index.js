@@ -41,7 +41,8 @@ app.route('/add').get((req, res)=>{
                 err?data.destroy({where:{ fileName:postFileName }}).then(()=>res.send(err)):
                 fs.rename(__dirname+'/assets/img/'+fileName,
                 `${__dirname}/assets/img/${postFileName}`,
-                function(err){err?data.destroy({where:{ fileName:postFileName }}).then(()=>res.send(err))
+                function(err){err?data.destroy({where:{ fileName:postFileName }}).then(()=>fs.unlink(__dirname+'/assets/img/'+fileName||__dirname+'/assets/img/'+postFileName,
+                (err)=>{if(err) throw Error(err)}).then(()=>{res.send(err)}))
                 :res.status(200).send('ok')})
             })
         }catch(err){
@@ -58,7 +59,8 @@ app.route('/add').get((req, res)=>{
                 err?data.destroy({where:{ fileName:postFileName }}).then(()=>res.send(err)):
                 fs.rename(__dirname+'/assets/vid/'+fileName,
                 `${__dirname}/assets/vid/${postFileName}`,
-                function(err){err?data.destroy({where:{ fileName:postFileName }}).then(()=>res.send(err))
+                function(err){err?data.destroy({where:{ fileName:postFileName }}).then(()=>fs.unlink(__dirname+'/assets/vid/'+fileName||__dirname+'/assets/vid/'+postFileName,
+                (err)=>{if(err) throw Error(err)}).then(()=>{res.send(err)}))
                 :res.status(200).send('ok')})
             })
         }catch(err){
