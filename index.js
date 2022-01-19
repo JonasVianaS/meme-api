@@ -6,11 +6,13 @@ const fs = require('fs')
 const port = process.env.SERVER_PORT || 5000
 const formats = require('./modules/formats')
 const data = require('./modules/tables/data')
-//const md = require('markdown').markdown
+const api = require('./modules/routes/api')
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true}))
 app.use(upload())
+app.use(express.static('assets'));
+app.use('/api', api)
 
 app.get('/',(req, res)=>{
     res.sendFile(__dirname+'/pages/home/index.html')
