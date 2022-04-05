@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+#file-upload{
+    max-width: 900px;
+    margin: auto;
+    background-color: aquamarine;
+}
+#file-inpt{
+    opacity:0
+}
